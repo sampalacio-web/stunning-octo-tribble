@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sam&Yana</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="s&y.png" type="image/x-icon">
+    <style>
+        body {
+            font-family: 'Georgia', sans-serif;
+            background-color: #f0f0f0;
+            color: #9CAF88;
+            margin: 25px;
+            padding: 20px;
+            text-align: center;
+            line-height: 1.6;
+        }
+        h1 {
+            font-size: 2.5em;
+            color: #4A7C59;
+            margin-bottom: 30px;
+            letter-spacing: 2px;
+            font-weight: bold;
+        }
+        .toc-box {
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            display: inline-block;
+            padding: 20px 40px;
+            margin: 30px auto;
+        }
+        .toc-box h2 {
+            color: #4A7C59;
+            margin-bottom: 15px;
+        }
+        .toc-box a {
+            display: block;
+            color: #333;
+            text-decoration: none;
+            margin: 10px 0;
+            font-size: 1.1em;
+            cursor: pointer;
+        }
+        .lyrics, .chapter-message {
+            margin-top: 30px;
+            font-size: 1.2em;
+            color: #222;
+            background: #fff;
+            border-radius: 8px;
+            padding: 20px;
+            display: none;
+            white-space: pre-line;
+        }
+        audio {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Anchored Souls: A Journey of Us</h1>
+    <div class="about-us" style="max-width:600px;margin:0 auto 30px auto;padding:18px 24px;background:#fff;border-radius:10px;box-shadow:0 2px 8px rgba(0,0,0,0.06);color:#4A7C59;">
+        <strong>About us!</strong><br>
+        We are currently <b>1 year, 9 months and 26 days</b> together. Our journey wasn't easy to have come a long way, however our love still remains strong.<br><br>
+        Me and her—<b>Sam and Yana</b>, met at school and we were classmates in 1st year high school where it all started. Our age gap is <b>5 months and 15 days</b> making her older than me; It's not necessary to add but I think it's a big deal for us.<br><br>
+        We might've had a rough start in loving each other but I'm glad that it's you whom I took risk to and whom I'll be loving forever.
+    </div>
+    <p>Welcome to our story, a tale of love, adventure, and cherished memories. Join us as we explore the chapters of our lives together.</p>
+    <div class="toc-box">
+        <h2>Table of Contents</h2>
+        <a id="chapter1-link">Chapter 1:  THE DAY WHERE IT ALL STARTED</a>
+        <a id="chapter2-link">Chapter 2: DAYDREAMING ABOUT YOU</a>
+        <a id="chapter3-link">Chapter 3: ARE YOU BORED YET?</a>
+        <a id="chapter4-link">Chapter 4: AROUND THE WORLD WITH YOU</a>
+        <a id="chapter5-link">Chapter 5: JUST TO SEE YOU</a>
+        <a id="chapter6-link">Chapter 6: TRULY CRAZY INLOVE</a>
+        <a id="chapter7-link">Chapter 7: BE BY MY SIDE</a>
+        <a id="chapter8-link">Chapter 8: MILES AND MILES AWAY</a>
+    </div>
+    <div class="lyrics" id="lyrics"></div>
+    <audio id="audio" src=""></audio>
+    <div class="chapter-message" id="chapter-message"></div>
+    <script>
+        // Lyrics and messages for each chapter
+        const chapters = [
+            {
+                lyrics: [
+                    "She looks just like a dream;",
+                    "The prettiest girl I've ever seen...."
+                ],
+                timings: [5000, 2700], // ms per line
+                audio: "she.MP3",
+                message: "I still remember the day that I first met you, it's funny how fate brought us that close in our first meet. Who would've thought that my seatmate in grade 7 will be a part of my life. It was cute, and it felt like fireworks are going off in my heart the first time I knew that you like me. I will forever treasure the feeling and experienced I felt that day but deep in my heart I wish I have loved you sooner."
+            },
+            {
+                lyrics: [
+                    "Your smile ignites just like a candle light (candle light),",
+                    "Then somehow I know everything's alright."
+                ],
+                timings: [4500, 2300],
+                audio: "your.MP3",
+                message: "It felt akward but I needed more, we started talking casually but avoided small contacts. I remember the first time we hugged and held hands, it was at the end-party in grade 7, I never knew I would be that close to you in person— it felt like a dream holding your hand and its a dream I never wanted to end. I wish I had told you that I craved more of your touch that day.",
+
+            },
+            {
+                lyrics: [
+                    "I don't know where we're going",
+                    "But I'd like to be by your side"
+                ],
+                timings: [3000, 3000],
+                audio: "i.MP3",
+                message: "It was a boring vacation without you but we met eventually. It was a secret at first although in the end, my family knew about us but they let us be. LDR with you wasn't easy but it's all worth it when we met."
+            },
+            {
+                lyrics: [
+                    "Dumb conversation",
+                    "We lose track of Time",
+                    "Have i told you lately",
+                    "I'm grateful you're mine"
+                ],
+                timings: [2500, 3000, 2700, 2000],
+                audio: "dumb.MP3",
+    message: "We started to meet and go out during the day or usually at night just to walk around and spend time with each other. We might've been out of breath from all that walking but we enjoyed it and I started to get familiar with the places here. I went to your house the first time and it felt nice knowing we have a spot to finally spend time with each other— the swing was nice but I wish we kept swinging it until we fell asleep in each other's arms, that would've been cute."
+
+},
+            {
+                lyrics: [
+                    "You're the perfect melody",
+                    "The only harmony",
+                    "I wanna hear",
+                ],
+                timings: [2800, 2800, 3500],
+                audio: "you.MP3",
+                message: "The first time you came to my house, I hope you felt comfortable even though I acted carelessly because I was nervous at that time. It was a new experience for the both of us but you quickly got the liking because you get to see me hehe. This is also the time where I felt like not seeing you would be my biggest nightmare— until now."
+            },
+            {
+                lyrics: [
+                    "My baby here on earth,",
+                    "Showed me what my heart was worth.",
+                ],
+                timings: [3500, 2900 ],
+                audio: "my.MP3",
+        message: "Where everything feels so perfect. It felt different at that time. We rarely had fights, tampuhan and all but I think that's because we're not fully comfortable at that time. It really feels so good to receive your love Sam ;> your love is still as sweet as the day you started loving me"
+    },
+    {
+        lyrics: [
+            "Because maybe,",
+            "You're gonna be the one that saves me",
+            "And after all",
+            "You're my wonderwall."
+        ],
+        timings: [4000, 5800, 5200, 5000],
+        audio: "bc.mp3",
+        message: "Whoo... I remember the uneasy feeling I got when the simulation started and I was clinging onto you the whole time. I was scared to come back but then I realized why am I scared if you'll be by my side. Studying never felt so great knowing that I'll make you proud as you're my biggest inspiration. To be honest, I survived grade 9 because of you."
+    },
+    {
+        lyrics: [
+            "Your voice",
+            "Was the soundtrack of my summer",
+            "Do know you're unlike any other?",
+            "You'll always be my thunder.",
+        ],
+        timings: [3000, 3000, 3000, 2200],
+        audio: "voice.mp3",
+        message: "The 1 month distance. It felt like absolute hell going through all of that at first but as you said I needed to think of it as a good way for us so I did. I really believe that the distance before was a way for us to learn about patience and understanding and what felt like forever soon came to an end. When we finally met it felt like I saw you for the first time again— it felt like my heart was melting finally holding your hands after many many weeks. After that, it made me realize how precious the times I've spent with you and how being with you will always be enough. I am forever grateful that I finally have you in my life, Sam."
+    }
+];
+        const lyricsDiv = document.getElementById('lyrics');
+        const messageDiv = document.getElementById('chapter-message');
+        const audio = document.getElementById('audio');
+
+        // Example colors for each chapter (customize as you want)
+        const lyricColors = [
+            ["#e57373", "#ba68c8"],
+            ["#64b5f6", "#4db6ac"],
+            ["#81c784", "#B8860B"],
+            ["#9575cd", "#4fc3f7"],
+            ["#f06292", "#7986cb"],
+            ["#ff8a65", "#d4e157"],
+            ["#ffd54f", "#4db6ac"],
+            ["#a1887f", "#81c784"]
+        ];
+
+        for (let c = 1; c <= 8; c++) {
+            document.getElementById(`chapter${c}-link`).addEventListener('click', function() {
+                // Reset
+                lyricsDiv.innerHTML = "";
+                lyricsDiv.style.display = "block";
+                messageDiv.style.display = "none";
+                audio.src = chapters[c - 1].audio;
+                audio.currentTime = 0;
+                audio.play();
+
+                // Show lyrics one by one with color
+                let i = 0;
+                const timings = chapters[c - 1].timings;
+                const colors = lyricColors[c - 1];
+
+                function showNextLine() {
+                    if (i < chapters[c - 1].lyrics.length) {
+                        const span = document.createElement("span");
+                        span.textContent = chapters[c - 1].lyrics[i] + "\n";
+                        span.style.color = colors[i % colors.length];
+                        lyricsDiv.appendChild(span);
+                        setTimeout(showNextLine, timings[i]);
+                        i++;
+                    } else {
+                        setTimeout(function() {
+                            lyricsDiv.style.display = "none";
+                            messageDiv.innerText = chapters[c - 1].message;
+                            messageDiv.style.display = "block";
+                        }, 1200);
+                    }
+                }
+                showNextLine();
+            });
+        }
+    </script>
+</body>
+</html>
